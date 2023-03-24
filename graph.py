@@ -1,6 +1,18 @@
-from py2neo import Graph
+from py2neo import Graph, Node, NodeMatcher, RelationshipMatcher
 
 
-def graph():    
-    graph = Graph("bolt://localhost:7687", auth=("neo4j", "password"))
-    graph.run("UNWIND range(1, 3) AS n RETURN n, n * n as n_sq")
+def init_graph():
+    graph = Graph("bolt://localhost:7687", auth=("neo4j", "fastapi1"))
+    return graph
+
+
+def create_node(label: str, propreties):
+    return Node(label, name=propreties.name, password=propreties.password)
+
+
+# def node_macher():
+#     return NodeMatcher()
+
+
+# def  relationship_matcher():
+#     return RelationshipMatcher()

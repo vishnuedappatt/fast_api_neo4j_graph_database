@@ -1,3 +1,4 @@
+repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
@@ -33,12 +34,3 @@
   rev: v1.4
   hooks:
   - id: autoflake  #remove unused import
-
-
-
-
-- repo: https://github.com/jendrikseipp/vulture
-  rev: 'v2.3'
-  hooks:
-  - id: vulture #unused code remove
-    entry: bash -c 'vulture  /home/vishnupe@genproresearch.net/fast_api_neo4j --min-confidence 100 --exclude "__pycache__,.mypy_cache,migrations"'
