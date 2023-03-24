@@ -1,8 +1,16 @@
+import os
+
+from dotenv import load_dotenv
 from py2neo import Graph, Node, NodeMatcher, RelationshipMatcher
+
+load_dotenv()
+host = os.getenv("NEO4J_HOST")
+password = os.getenv("NEO4J_PASSWORD")
+user = os.getenv("NEO4J_USER")
 
 
 def init_graph():
-    graph = Graph("bolt://localhost:7687", auth=("neo4j", "fastapi1"))
+    graph = Graph(host, auth=(user, password))
     return graph
 
 
