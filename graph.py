@@ -14,13 +14,15 @@ def init_graph():
     return graph
 
 
-def create_node(label: str, propreties):
-    return Node(label, name=propreties.name, password=propreties.password)
+def create_person_node(label: str, propreties):
+    return Node(
+        label,
+        name=propreties.name,
+        password=propreties.password,
+        username=propreties.username,
+    )
 
 
-# def node_macher():
-#     return NodeMatcher()
-
-
-# def  relationship_matcher():
-#     return RelationshipMatcher()
+def matching_person_node(g):
+    # n_matching=
+    return NodeMatcher(g)

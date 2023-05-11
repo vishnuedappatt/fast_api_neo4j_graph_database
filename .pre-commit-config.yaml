@@ -25,12 +25,13 @@ repos:
 
 
 
-- repo: https://github.com/pycqa/isort
-  rev: 5.10.1
-  hooks:
-  -     id: isort   #sort import alphabetically
 
 - repo: https://github.com/myint/autoflake
   rev: v1.4
   hooks:
   - id: autoflake  #remove unused import
+
+# - repo: https://github.com/pycqa/isort
+#   rev: 5.10.1
+#   hooks:
+#   -     id: isort   #sort import alphabetically
