@@ -5,16 +5,24 @@ name = "pypi"
 
 [packages]
 fastapi = "*"
-uvicorn = {extras = ["standard"], version = "*"}
 py2neo = "*"
 pre-commit = "*"
 pydantic = "*"
 python-dotenv = "*"
-python-jose = {extras = ["cryptography"], version = "*"}
-passlib = {extras = ["bcrypt"], version = "*"}
 typing = "*"
+python-multipart = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.8"
+
+[packages.uvicorn]
+extras = [ "standard",]
+version = "*"
+
+[packages.python-jose]
+extras = [ "cryptography",]
+
+[packages.passlib]
+extras = [ "bcrypt",]
